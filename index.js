@@ -3,6 +3,7 @@ native = ['York','Of'];
 destination = ['Poltava','In'];
 correctRainbow = ['Richard','Of','York','Gave','Battle','In','Vain'];
 colorsAndWords = [];
+colors = ['#f54336', '#ff9901', '#ffec3b', '#8cc44a', '#03aaf4', '#4051b6', '#9c27b0']
 
 rainbow = destination.concat(native, hero);
 rainbow.reverse()
@@ -28,29 +29,7 @@ for (i = 0; i < 7; i++) {
 for (i in rainbow) {
     color = null;
     // Maybe i should have used red, orange, yellow, green, blue, indigo, violet colors but these colors look so terrible in html
-    switch (rainbow[i]) {
-        case 'Richard':
-            color = '#f54336';
-            break;
-        case 'Of':
-            color = '#ff9901';
-            break;
-        case 'York':
-            color = '#ffec3b';
-            break;
-        case 'Gave':
-            color = '#8cc44a';
-            break;
-        case 'Battle':
-            color = '#03aaf4';
-            break;
-        case 'In':
-            color = '#4051b6';
-            break;
-        case 'Vain':
-            color = '#9c27b0';
-            break;
-    }
+    color = colors[i];
     colorsAndWords.push(`<div style="display: flex; flex-direction: column; align-items: center;">
     <div style="background: ${color};height: 50px; width: 50px; border-radius: 50%;"></div>
     <div style="font-family: 'Quicksand', sans-serif;">${rainbow[i]}</div></div>`);
